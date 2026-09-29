@@ -6,6 +6,19 @@ Entity Relationship Diagram (ERD) for **WitleShop (Pty) Ltd**, a South African o
 
 WitleShop is growing fast and needs a database to manage customers, products, orders, payments, deliveries, and suppliers. This repository contains the database design in the form of an ERD.
 
+## Database Purpose
+The database system is designed to support the following business operations:
+
+- Customer registration and management
+- Customer delivery address management
+- Product management
+- Product category management
+- Supplier management
+- Order management
+- Order item management
+- Payment management
+- Delivery management
+
 ## ERD
 
 ![WitleShop ERD](witleshop-erd.drawio.png)
@@ -52,11 +65,24 @@ The M:N relationship between **Order** and **Product** is resolved with the junc
 - Product (1) → (M) Order_Item
 
 ## Business Rules
+The database follows these business rules:
 
 - Customers must register before placing an order.
-- Email addresses must be unique.
-- Every order must have exactly one payment and one delivery record.
-- A delivery must be linked to one of the ordering customer's registered addresses.
+- Customer email addresses must be unique.
+- A customer can have multiple delivery addresses.
+- A customer can place multiple orders.
+- Each product belongs to one category.
+- A category can contain many products.
+- Each product is supplied by one supplier.
+- A supplier can supply many products.
+- An order belongs to one customer.
+- An order can contain multiple products.
+- A product can appear in multiple orders.
+- Each order must have one payment record.
+- Each order must have one delivery record.
+- A delivery must use one of the customer's registered addresses.
+- Order status can be Pending, Shipped, Delivered, or Cancelled.
+- Payment methods include Card, EFT, and PayFast.
 
 ## Repository Contents
 
@@ -69,6 +95,12 @@ The M:N relationship between **Order** and **Product** is resolved with the junc
 
 - [draw.io](https://www.drawio.com/) for the ERD
 - GitHub for version control
+
+## Conclusion
+
+This database structure provides **WitleShop (Pty) Ltd** with a structured way to manage its online retail operations. It connects customers, addresses, products, categories, suppliers, orders, payments, and deliveries while maintaining the relationships between them.
+
+The use of the OrderItem entity allows the system to correctly manage multiple products within an order and products appearing in multiple orders.
 
 ## Author
 
