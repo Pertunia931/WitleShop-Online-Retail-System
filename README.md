@@ -115,8 +115,6 @@ The work produced for this project is the **WitleShop Entity Relationship Diagra
 
 To edit the diagram, download the file and open it in [draw.io](https://www.drawio.com/) using **File → Open from → Device**.
 
-![WitleShop ERD](witleshop-erd.drawio.png)
-
 ## Conclusion
 
 This database structure provides **WitleShop (Pty) Ltd** with a structured way to manage its online retail operations. It connects customers, addresses, products, categories, suppliers, orders, payments, and deliveries while maintaining the relationships between them.
