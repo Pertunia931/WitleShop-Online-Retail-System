@@ -9,15 +9,21 @@ WitleShop is growing fast and needs a database to manage customers, products, or
 ## Database Purpose
 The database system is designed to support the following business operations:
 
-- Customer registration and management
-- Customer delivery address management
-- Product management
-- Product category management
-- Supplier management
-- Order management
-- Order item management
-- Payment management
-- Delivery management
+- **Customer management:** customers register with a unique email, and each customer can have many delivery addresses and place many orders.
+- **Product management:** each product belongs to one category and is supplied by one supplier. A category and a supplier can each have many products.
+- **Order management:** each order belongs to one customer and can contain many products, and a product can appear in many orders (resolved with an Order_Item)
+- **payment management:** each order has exactly one payment (Card, EFT, or PayFast)
+- **Delivery management:** each order has exactly one delivery, linked to one of the customer's registered  addresses.
+
+## Skills I Learned
+- Reading a business case study and identifying the **entities** the database
+- Choosing **primary keys** to uniquely identify each record
+- Adding **foreign keys** to link tables together
+- Defining relationships and showing **Cardinality**: one-to-one (1:1), one-to-many (1:M), many-to-many (M:N)
+- Resolving a many-to-many relationship using a **junction table** (Order_Item)
+- Turning written **business rules** into database constraints, such as unique emails and one payment per order
+- Drawing a clear ERD using **crow's foot notation**
+- Documenting a project with **Markdown** and publishing it on **Github**
 
 ## ERD
 
@@ -93,8 +99,23 @@ The database follows these business rules:
 
 ## Tools Used
 
-- [draw.io](https://www.drawio.com/) for the ERD
-- GitHub for version control
+- [draw.io](https://www.drawio.com/) for drawing the ERD
+- GitHub for storing and publishing the project
+- Markdown for writing this README
+
+## Reference 
+
+The work produced for this project is the **WitleShop Entity Relationship Diagram (ERD)**, based on the WitleShop Online Retail System case study.
+
+- **Deliverable:** Complete ERD showing entities, attributes, primary keys, foreign keys, relationships, and cardinality (1:1, 1:M, M:N)
+- **File:** [witleshop-erd.drawio.png](witleshop-erd.drawio.png)
+- **Format:** PNG image with the editable draw.io diagram embedded
+- **Created with:** draw.io
+- **Case study:** WitleShop Online Retail System (customers, products, orders, payments, deliveries, and suppliers)
+
+To edit the diagram, download the file and open it in [draw.io](https://www.drawio.com/) using **File → Open from → Device**.
+
+![WitleShop ERD](witleshop-erd.drawio.png)
 
 ## Conclusion
 
